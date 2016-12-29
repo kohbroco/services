@@ -18,8 +18,8 @@ class windows
             $output_file = \config::temp_path_hash($directory);
             $cmd = "$scan_exe \"$directory\" \"$output_file\"";
             exec($cmd);
-            $handle = file_get_contents($output_file);
-            $files = explode("\n", $handle);
+            $file_content = trim(file_get_contents($output_file));
+            $files = array_map('trim', explode("\n", $file_content));
             return $files;
         }
         else{
