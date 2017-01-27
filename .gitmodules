@@ -1,3 +1,6 @@
 [submodule "transposer"]
 	path = transposer
 	url = https://github.com/kohbroco/transposer.git
+[submodule "jira"]
+	path = jira
+	url = https://github.com/conradkoh/jira.git
